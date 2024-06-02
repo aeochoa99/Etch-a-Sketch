@@ -1,0 +1,34 @@
+html, body {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: rgb(126, 251, 255);
+}
+
+.board {
+    background-color: rgb(255, 53, 53);
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    border-radius: 25px;
+}
+
+@media (orientation: landscape) {
+    .board {
+       height: 75%;
+       width: 60%;
+       margin-top: 40px;
+    }
+}
+
+
+@media (orientation: portrait) {
+    .board {
+       height: 25%;
+       width: 80%;
+       margin-top: 50px;
+    }
+}
