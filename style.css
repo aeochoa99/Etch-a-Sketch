@@ -32,3 +32,17 @@ body {
        margin-top: 50px;
     }
 }
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: 80%;
+    width: 90%;
+    margin: auto;
+}
+
+.grid div {
+    background-color: rgb(192, 192, 192); 
+    border: 1px solid #9b9b9b; 
+    box-sizing: border-box;
+}
