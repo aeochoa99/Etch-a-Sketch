@@ -1,3 +1,11 @@
+const smallBtn = document.querySelector(".small");
+
+const mediumBtn = document.querySelector(".medium");
+
+const largeBtn = document.querySelector(".large");
+
+const resetBtn = document.querySelector("reset");
+
 function createGrid(size) {
     let grid = document.querySelector(".grid");
 
@@ -10,5 +18,3 @@ function createGrid(size) {
         grid.appendChild(cell);
     }
 }
-
-createGrid(32);
