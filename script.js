@@ -8,8 +8,6 @@ const resetBtn = document.querySelector(".reset");
 
 const grid = document.querySelector(".grid");
 
-const cell = document.querySelector(".cell");
-
 function createGrid(size) {
     let cellSize = 100 / size + "%";
 
@@ -37,4 +35,11 @@ mediumBtn.addEventListener("click", function() {
 largeBtn.addEventListener("click", function() {
     grid.innerHTML = "";
     createGrid(64);
+});
+
+resetBtn.addEventListener("click", function() {
+    let cells = document.querySelectorAll(".cell");
+    cells.forEach(function(cell) {
+        cell.style.backgroundColor = "rgb(192, 192, 192)";
+    });
 });
