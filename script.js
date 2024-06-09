@@ -13,6 +13,7 @@ function createGrid(size) {
 
     for (let i = 0; i < size * size; i++) {
         let cell = document.createElement("div");
+        cell.className = "cell"
         cell.style.flex = `0 0 ${cellSize}`;
         cell.style.height = cellSize;
         grid.appendChild(cell);
@@ -34,4 +35,9 @@ mediumBtn.addEventListener("click", function() {
 largeBtn.addEventListener("click", function() {
     grid.innerHTML = "";
     createGrid(64);
+});
+
+resetBtn.addEventListener("click", function() {
+    grid.innerHTML = "";
+    createGrid(16);
 });
