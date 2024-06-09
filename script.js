@@ -8,6 +8,10 @@ const resetBtn = document.querySelector(".reset");
 
 const grid = document.querySelector(".grid");
 
+const eraseBtn = document.querySelector(".erase");
+
+let eraseMode = false;
+
 function createGrid(size) {
     let cellSize = 100 / size + "%";
 
@@ -17,6 +21,13 @@ function createGrid(size) {
         cell.style.flex = `0 0 ${cellSize}`;
         cell.style.height = cellSize;
         grid.appendChild(cell);
+        cell.addEventListener("click", function () {
+            if (eraseMode === true) {
+                cell.style.backgroundColor = "";
+            } else {
+                cell.style.backgroundColor = "rgb(100, 100, 100)";
+            }
+        });
     }
 }
 
@@ -43,3 +54,7 @@ resetBtn.addEventListener("click", function() {
         cell.style.backgroundColor = "rgb(192, 192, 192)";
     });
 });
+
+eraseBtn.addEventListener("click", function() {
+    eraseMode = !eraseMode;
+})
