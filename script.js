@@ -4,7 +4,7 @@ const mediumBtn = document.querySelector(".medium");
 
 const largeBtn = document.querySelector(".large");
 
-const resetBtn = document.querySelector("reset");
+const resetBtn = document.querySelector(".reset");
 
 function createGrid(size) {
     let grid = document.querySelector(".grid");
