@@ -6,9 +6,9 @@ const largeBtn = document.querySelector(".large");
 
 const resetBtn = document.querySelector(".reset");
 
-function createGrid(size) {
-    let grid = document.querySelector(".grid");
+const grid = document.querySelector(".grid");
 
+function createGrid(size) {
     let cellSize = 100 / size + "%";
 
     for (let i = 0; i < size * size; i++) {
@@ -18,3 +18,20 @@ function createGrid(size) {
         grid.appendChild(cell);
     }
 }
+
+createGrid(16);
+
+smallBtn.addEventListener("click", function() {
+    grid.innerHTML = "";
+    createGrid(16);
+});
+
+mediumBtn.addEventListener("click", function() {
+    grid.innerHTML = "";
+    createGrid(32);
+});
+
+largeBtn.addEventListener("click", function() {
+    grid.innerHTML = "";
+    createGrid(64);
+});
